@@ -7,68 +7,69 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
-    /* Morandi Palette Custom Styles */
+    /* Premium Morandi Theme (Oat, Sage, Muted Slate) */
     :root {
-      --morandi-bg: #191c1e;
-      --morandi-surface: #22262a;
-      --morandi-surface-light: #2b3136;
-      --morandi-border: #363d44;
-      --morandi-sage: #8da399;
-      --morandi-slate-blue: #7c8f9e;
-      --morandi-dusty-mauve: #9e8e9f;
-      --morandi-warm-sand: #c7b299;
-      --morandi-text: #eceae4;
-      --morandi-subtext: #9fa6ad;
+      --m-bg: #16181a;
+      --m-card: #202428;
+      --m-card-inner: #191c1f;
+      --m-border: #2d3339;
+      --m-sage: #7d9687;
+      --m-sage-light: #9ab4a5;
+      --m-slate: #738896;
+      --m-sand: #c9b49c;
+      --m-clay: #b88d84;
+      --m-text-main: #f0eee9;
+      --m-text-muted: #9aa1a9;
     }
     body {
-      background-color: var(--morandi-bg);
-      color: var(--morandi-text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--m-bg);
+      color: var(--m-text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     }
-    @keyframes morandi-pulse {
-      0%, 100% { box-shadow: 0 0 12px rgba(124, 143, 158, 0.25); }
-      50% { box-shadow: 0 0 20px rgba(124, 143, 158, 0.55); }
+    @keyframes morandi-soft-glow {
+      0%, 100% { box-shadow: 0 0 10px rgba(125, 150, 135, 0.2); }
+      50% { box-shadow: 0 0 18px rgba(125, 150, 135, 0.45); }
     }
     .node-active {
-      animation: morandi-pulse 1.5s infinite;
-      border-color: #7c8f9e !important;
-      background-color: rgba(124, 143, 158, 0.12) !important;
+      animation: morandi-soft-glow 1.4s infinite;
+      border-color: #7d9687 !important;
+      background-color: rgba(125, 150, 135, 0.12) !important;
     }
   </style>
 </head>
 <body class="min-h-screen antialiased">
 
   <!-- Personalized Morandi Banner -->
-  <div class="bg-[#24292e] border-b border-[#363d44] px-4 py-2.5 text-xs text-center text-[#d8d5cd]">
+  <div class="bg-[#21262b] border-b border-[#2d343b] px-4 py-2.5 text-xs text-center text-[#d5d2ca]">
     <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="px-2 py-0.5 rounded bg-[#5c6e7a] text-[#f4f3ef] font-semibold uppercase tracking-wider text-[10px]">Custom POC</span>
-        <span>Specially designed for: <strong class="text-[#eceae4]">Upwork Project — Adapt Existing Python Script + Build K-12 School Directory Dataset</strong></span>
+        <span class="px-2 py-0.5 rounded-md bg-[#4d5e54] text-[#f4f3ef] font-semibold uppercase tracking-wider text-[10px] border border-[#62756a]">Custom POC</span>
+        <span>Specially designed for: <strong class="text-[#f0eee9]">Upwork Project — Adapt Existing Python Script + Build K-12 School Directory Dataset</strong></span>
       </div>
-      <div class="text-[#9fa6ad]">
-        Engineered by: <span class="text-[#7c8f9e] font-medium">Senior Python & Data Infrastructure Engineer</span>
+      <div class="text-[#9aa1a9]">
+        Engineered by: <span class="text-[#9ab4a5] font-medium">Senior Python & Data Infrastructure Engineer</span>
       </div>
     </div>
   </div>
 
   <!-- Header -->
-  <header class="border-b border-[#2e353c] bg-[#1d2125]/85 backdrop-blur sticky top-0 z-50">
+  <header class="border-b border-[#2a3036] bg-[#1a1d20]/90 backdrop-blur sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-xl bg-[#2e353c] border border-[#404953] flex items-center justify-center font-bold text-[#7c8f9e] shadow-sm">
-          <i class="fa-solid fa-graduation-cap"></i>
+        <div class="w-10 h-10 rounded-xl bg-[#252b30] border border-[#373f47] flex items-center justify-center font-bold text-[#9ab4a5] shadow-sm">
+          <i class="fa-solid fa-graduation-cap text-lg"></i>
         </div>
         <div>
-          <h1 class="text-base font-bold tracking-tight text-[#eceae4] flex items-center gap-2">
+          <h1 class="text-base font-bold tracking-tight text-[#f0eee9] flex items-center gap-2">
             NCES K-12 Directory Extraction Engine
-            <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-[#2b333a] text-[#7c8f9e] border border-[#3b454f]">Python 3.8+ & Playwright Fallback</span>
+            <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-[#283036] text-[#9ab4a5] border border-[#39444d]">Python 3.8+ & Playwright</span>
           </h1>
-          <p class="text-xs text-[#9fa6ad]">Automated NCES CCD Ranking, URL Sourcing, District Directory Parsing & Email Validation</p>
+          <p class="text-xs text-[#9aa1a9]">Automated NCES CCD Demographic Ranking, Sourced Domain Validation & Staff Extraction</p>
         </div>
       </div>
       <div class="flex items-center gap-3">
-        <span class="inline-flex items-center gap-1.5 text-xs text-[#8da399] bg-[#8da399]/10 px-2.5 py-1 rounded-full border border-[#8da399]/25">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#8da399] animate-pulse"></span> Live Interactive Pipeline
+        <span class="inline-flex items-center gap-1.5 text-xs text-[#9ab4a5] bg-[#7d9687]/15 px-3 py-1 rounded-full border border-[#7d9687]/30">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#9ab4a5] animate-pulse"></span> Live Interactive Pipeline
         </span>
       </div>
     </div>
@@ -78,44 +79,44 @@
   <main class="max-w-6xl mx-auto px-4 py-8 space-y-8">
 
     <!-- 4-Stage Architecture Pipeline -->
-    <div class="bg-[#212529] border border-[#2e353c] rounded-2xl p-6 shadow-xl">
-      <h2 class="text-xs uppercase tracking-wider font-semibold text-[#9fa6ad] mb-4 flex items-center gap-2">
-        <i class="fa-solid fa-network-wired text-[#7c8f9e]"></i> End-to-End Execution Architecture
+    <div class="bg-[#1e2226] border border-[#2b3137] rounded-2xl p-6 shadow-xl">
+      <h2 class="text-xs uppercase tracking-wider font-semibold text-[#9aa1a9] mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-network-wired text-[#738896]"></i> End-to-End Execution Architecture
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
-        <div id="node-1" class="bg-[#282d33] border border-[#343b43] rounded-xl p-4 transition-all duration-300">
+        <div id="node-1" class="bg-[#24292e] border border-[#313840] rounded-xl p-4 transition-all duration-300">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-[#7c8f9e]/20 text-[#7c8f9e] flex items-center justify-center font-bold text-sm">1</div>
+            <div class="w-8 h-8 rounded-lg bg-[#738896]/20 text-[#8ba0af] flex items-center justify-center font-bold text-sm">1</div>
             <div>
-              <div class="text-sm font-semibold text-[#eceae4]">NCES Ingestion</div>
-              <div class="text-xs text-[#9fa6ad]">Rank by 9-12 Enrollment</div>
+              <div class="text-sm font-semibold text-[#f0eee9]">NCES Ingestion</div>
+              <div class="text-xs text-[#9aa1a9]">Rank by 9-12 Enrollment</div>
             </div>
           </div>
         </div>
-        <div id="node-2" class="bg-[#282d33] border border-[#343b43] rounded-xl p-4 transition-all duration-300">
+        <div id="node-2" class="bg-[#24292e] border border-[#313840] rounded-xl p-4 transition-all duration-300">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-[#8da399]/20 text-[#8da399] flex items-center justify-center font-bold text-sm">2</div>
+            <div class="w-8 h-8 rounded-lg bg-[#7d9687]/20 text-[#9ab4a5] flex items-center justify-center font-bold text-sm">2</div>
             <div>
-              <div class="text-sm font-semibold text-[#eceae4]">URL Resolver</div>
-              <div class="text-xs text-[#9fa6ad]">Live Status & Anti-Aggregator</div>
+              <div class="text-sm font-semibold text-[#f0eee9]">URL Resolver</div>
+              <div class="text-xs text-[#9aa1a9]">Live Status & Anti-Aggregator</div>
             </div>
           </div>
         </div>
-        <div id="node-3" class="bg-[#282d33] border border-[#343b43] rounded-xl p-4 transition-all duration-300">
+        <div id="node-3" class="bg-[#24292e] border border-[#313840] rounded-xl p-4 transition-all duration-300">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-[#9e8e9f]/20 text-[#9e8e9f] flex items-center justify-center font-bold text-sm">3</div>
+            <div class="w-8 h-8 rounded-lg bg-[#b88d84]/20 text-[#cca49c] flex items-center justify-center font-bold text-sm">3</div>
             <div>
-              <div class="text-sm font-semibold text-[#eceae4]">Playwright Fallback</div>
-              <div class="text-xs text-[#9fa6ad]">Handles Dynamic JS Pages</div>
+              <div class="text-sm font-semibold text-[#f0eee9]">Playwright Fallback</div>
+              <div class="text-xs text-[#9aa1a9]">Handles Dynamic JS Pages</div>
             </div>
           </div>
         </div>
-        <div id="node-4" class="bg-[#282d33] border border-[#343b43] rounded-xl p-4 transition-all duration-300">
+        <div id="node-4" class="bg-[#24292e] border border-[#313840] rounded-xl p-4 transition-all duration-300">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg bg-[#c7b299]/20 text-[#c7b299] flex items-center justify-center font-bold text-sm">4</div>
+            <div class="w-8 h-8 rounded-lg bg-[#c9b49c]/20 text-[#d8c5b0] flex items-center justify-center font-bold text-sm">4</div>
             <div>
-              <div class="text-sm font-semibold text-[#eceae4]">Counselor Extractor</div>
-              <div class="text-xs text-[#9fa6ad]">verify_emails.py Clean Output</div>
+              <div class="text-sm font-semibold text-[#f0eee9]">Counselor Extractor</div>
+              <div class="text-xs text-[#9aa1a9]">verify_emails.py Clean Output</div>
             </div>
           </div>
         </div>
@@ -123,46 +124,46 @@
     </div>
 
     <!-- Execution & Output Console -->
-    <div class="bg-[#212529] border border-[#2e353c] rounded-2xl p-6 shadow-xl space-y-6">
+    <div class="bg-[#1e2226] border border-[#2b3137] rounded-2xl p-6 shadow-xl space-y-6">
       
       <!-- Top Action Bar -->
-      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-[#2e353c] pb-5">
+      <div class="flex flex-wrap items-center justify-between gap-4 border-b border-[#2b3137] pb-5">
         <div>
-          <h3 class="font-bold text-[#eceae4] flex items-center gap-2 text-sm">
-            <i class="fa-solid fa-bolt text-[#7c8f9e]"></i> Pipeline Execution Simulator
+          <h3 class="font-bold text-[#f0eee9] flex items-center gap-2 text-sm">
+            <i class="fa-solid fa-bolt text-[#738896]"></i> Pipeline Execution Simulator
           </h3>
-          <p class="text-xs text-[#9fa6ad] mt-0.5">Test the pipeline against top US public school districts ranked by NCES demographic criteria</p>
+          <p class="text-xs text-[#9aa1a9] mt-0.5">Test the pipeline against top US public school districts ranked by NCES demographic criteria</p>
         </div>
-        <button id="run-btn" onclick="runK12Pipeline()" class="py-2.5 px-5 bg-[#404e5a] hover:bg-[#4d5c69] text-[#f4f3ef] font-semibold rounded-xl shadow-md transition-all flex items-center gap-2 text-sm border border-[#526372]">
-          <i class="fa-solid fa-play text-xs"></i> Run Data Extraction Pilot
+        <button id="run-btn" onclick="runK12Pipeline()" class="py-2.5 px-5 bg-[#3b4742] hover:bg-[#485750] text-[#f0eee9] font-semibold rounded-xl shadow-md transition-all flex items-center gap-2 text-sm border border-[#52635c]">
+          <i class="fa-solid fa-play text-xs text-[#9ab4a5]"></i> Run Data Extraction Pilot
         </button>
       </div>
 
       <!-- Tabs Header -->
-      <div class="flex items-center space-x-2 border-b border-[#2e353c] pb-3 text-sm overflow-x-auto">
-        <button onclick="switchK12Tab('tab-contacts')" id="btn-tab-contacts" class="px-3.5 py-1.5 rounded-lg bg-[#404e5a] text-[#eceae4] font-medium flex items-center gap-2 text-xs border border-[#526372]">
-          <i class="fa-solid fa-address-book text-[#8da399]"></i> contacts_verified.csv Preview
+      <div class="flex items-center space-x-2 border-b border-[#2b3137] pb-3 text-sm overflow-x-auto">
+        <button onclick="switchK12Tab('tab-contacts')" id="btn-tab-contacts" class="px-3.5 py-1.5 rounded-lg bg-[#3b4742] text-[#f0eee9] font-medium flex items-center gap-2 text-xs border border-[#52635c]">
+          <i class="fa-solid fa-address-book text-[#9ab4a5]"></i> contacts_verified.csv Preview
         </button>
-        <button onclick="switchK12Tab('tab-districts')" id="btn-tab-districts" class="px-3.5 py-1.5 rounded-lg bg-[#181b1e] text-[#9fa6ad] hover:text-[#eceae4] font-medium flex items-center gap-2 text-xs border border-[#2b3136]">
-          <i class="fa-solid fa-school text-[#7c8f9e]"></i> districts.csv (Ranked NCES)
+        <button onclick="switchK12Tab('tab-districts')" id="btn-tab-districts" class="px-3.5 py-1.5 rounded-lg bg-[#16181a] text-[#9aa1a9] hover:text-[#f0eee9] font-medium flex items-center gap-2 text-xs border border-[#262c32]">
+          <i class="fa-solid fa-school text-[#738896]"></i> districts.csv (Ranked NCES)
         </button>
-        <button onclick="switchK12Tab('tab-playwright')" id="btn-tab-playwright" class="px-3.5 py-1.5 rounded-lg bg-[#181b1e] text-[#9fa6ad] hover:text-[#eceae4] font-medium flex items-center gap-2 text-xs border border-[#2b3136]">
-          <i class="fa-solid fa-terminal text-[#c7b299]"></i> Playwright JS Logs
+        <button onclick="switchK12Tab('tab-playwright')" id="btn-tab-playwright" class="px-3.5 py-1.5 rounded-lg bg-[#16181a] text-[#9aa1a9] hover:text-[#f0eee9] font-medium flex items-center gap-2 text-xs border border-[#262c32]">
+          <i class="fa-solid fa-terminal text-[#c9b49c]"></i> Playwright JS Logs
         </button>
-        <button onclick="switchK12Tab('tab-docs')" id="btn-tab-docs" class="px-3.5 py-1.5 rounded-lg bg-[#181b1e] text-[#9fa6ad] hover:text-[#eceae4] font-medium flex items-center gap-2 text-xs border border-[#2b3136]">
-          <i class="fa-solid fa-book text-[#9e8e9f]"></i> 1-Page Rerun Documentation
+        <button onclick="switchK12Tab('tab-docs')" id="btn-tab-docs" class="px-3.5 py-1.5 rounded-lg bg-[#16181a] text-[#9aa1a9] hover:text-[#f0eee9] font-medium flex items-center gap-2 text-xs border border-[#262c32]">
+          <i class="fa-solid fa-book text-[#cca49c]"></i> 1-Page Rerun Documentation
         </button>
       </div>
 
       <!-- Tab 1: contacts_verified.csv -->
       <div id="tab-contacts" class="k12-tab space-y-4">
-        <div class="flex items-center justify-between text-xs text-[#9fa6ad]">
+        <div class="flex items-center justify-between text-xs text-[#9aa1a9]">
           <span>Target roles: High School Counselors, College Advisors, Guidance Directors</span>
-          <span class="text-[#8da399] font-mono"><i class="fa-solid fa-check"></i> Filtered by verify_emails.py (No dead domains / roles)</span>
+          <span class="text-[#9ab4a5] font-mono"><i class="fa-solid fa-check"></i> Filtered by verify_emails.py (No dead domains / roles)</span>
         </div>
-        <div class="overflow-x-auto border border-[#2e353c] rounded-xl">
+        <div class="overflow-x-auto border border-[#2b3137] rounded-xl">
           <table class="w-full text-left text-xs">
-            <thead class="bg-[#181b1e] text-[#9fa6ad] uppercase font-mono">
+            <thead class="bg-[#16181a] text-[#9aa1a9] uppercase font-mono">
               <tr>
                 <th class="p-3">Full Name</th>
                 <th class="p-3">Verified Title</th>
@@ -172,38 +173,38 @@
                 <th class="p-3">Extraction Method</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-[#2e353c] bg-[#1d2125] font-mono text-[#d8d5cd]" id="contacts-body">
+            <tbody class="divide-y divide-[#2b3137] bg-[#1a1d20] font-mono text-[#d5d2ca]" id="contacts-body">
               <tr>
-                <td class="p-3 font-semibold text-[#eceae4]">Dr. Marcus Vance</td>
-                <td class="p-3 text-[#7c8f9e]">Lead College & Career Counselor</td>
+                <td class="p-3 font-semibold text-[#f0eee9]">Dr. Marcus Vance</td>
+                <td class="p-3 text-[#738896]">Lead College & Career Counselor</td>
                 <td class="p-3">Atlanta Public Schools</td>
                 <td class="p-3">GA</td>
-                <td class="p-3 text-[#8da399]">m.vance@apsk12.org</td>
-                <td class="p-3"><span class="px-2 py-0.5 rounded bg-[#7c8f9e]/15 text-[#7c8f9e] text-[10px] border border-[#7c8f9e]/30">Static HTML</span></td>
+                <td class="p-3 text-[#9ab4a5]">m.vance@apsk12.org</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-[#738896]/15 text-[#8ba0af] text-[10px] border border-[#738896]/30">Static HTML</span></td>
               </tr>
               <tr>
-                <td class="p-3 font-semibold text-[#eceae4]">Sarah Jenkins-Taylor</td>
-                <td class="p-3 text-[#7c8f9e]">Director of Guidance & Counseling</td>
+                <td class="p-3 font-semibold text-[#f0eee9]">Sarah Jenkins-Taylor</td>
+                <td class="p-3 text-[#738896]">Director of Guidance & Counseling</td>
                 <td class="p-3">Detroit Public Schools Community District</td>
                 <td class="p-3">MI</td>
-                <td class="p-3 text-[#8da399]">s.jenkins@detroitk12.org</td>
-                <td class="p-3"><span class="px-2 py-0.5 rounded bg-[#9e8e9f]/15 text-[#9e8e9f] text-[10px] border border-[#9e8e9f]/30">Playwright JS Fallback</span></td>
+                <td class="p-3 text-[#9ab4a5]">s.jenkins@detroitk12.org</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-[#b88d84]/15 text-[#cca49c] text-[10px] border border-[#b88d84]/30">Playwright JS Fallback</span></td>
               </tr>
               <tr>
-                <td class="p-3 font-semibold text-[#eceae4]">Robert T. Henderson</td>
-                <td class="p-3 text-[#7c8f9e]">High School Guidance Counselor (Grades 11-12)</td>
+                <td class="p-3 font-semibold text-[#f0eee9]">Robert T. Henderson</td>
+                <td class="p-3 text-[#738896]">High School Guidance Counselor (Grades 11-12)</td>
                 <td class="p-3">Memphis-Shelby County Schools</td>
                 <td class="p-3">TN</td>
-                <td class="p-3 text-[#8da399]">hendersonr@scsk12.org</td>
-                <td class="p-3"><span class="px-2 py-0.5 rounded bg-[#7c8f9e]/15 text-[#7c8f9e] text-[10px] border border-[#7c8f9e]/30">Static HTML</span></td>
+                <td class="p-3 text-[#9ab4a5]">hendersonr@scsk12.org</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-[#738896]/15 text-[#8ba0af] text-[10px] border border-[#738896]/30">Static HTML</span></td>
               </tr>
               <tr>
-                <td class="p-3 font-semibold text-[#eceae4]">Alicia Washington</td>
-                <td class="p-3 text-[#7c8f9e]">Post-Secondary Transition Counselor</td>
+                <td class="p-3 font-semibold text-[#f0eee9]">Alicia Washington</td>
+                <td class="p-3 text-[#738896]">Post-Secondary Transition Counselor</td>
                 <td class="p-3">Baltimore City Public Schools</td>
                 <td class="p-3">MD</td>
-                <td class="p-3 text-[#8da399]">awashington@bcps.k12.md.us</td>
-                <td class="p-3"><span class="px-2 py-0.5 rounded bg-[#9e8e9f]/15 text-[#9e8e9f] text-[10px] border border-[#9e8e9f]/30">Playwright JS Fallback</span></td>
+                <td class="p-3 text-[#9ab4a5]">awashington@bcps.k12.md.us</td>
+                <td class="p-3"><span class="px-2 py-0.5 rounded bg-[#b88d84]/15 text-[#cca49c] text-[10px] border border-[#b88d84]/30">Playwright JS Fallback</span></td>
               </tr>
             </tbody>
           </table>
@@ -212,10 +213,10 @@
 
       <!-- Tab 2: districts.csv -->
       <div id="tab-districts" class="k12-tab hidden space-y-4">
-        <div class="text-xs text-[#9fa6ad]">Ranked by Grades 9-12 Black Student Enrollment (NCES CCD Universe Data):</div>
-        <div class="overflow-x-auto border border-[#2e353c] rounded-xl">
+        <div class="text-xs text-[#9aa1a9]">Ranked by Grades 9-12 Black Student Enrollment (NCES CCD Universe Data):</div>
+        <div class="overflow-x-auto border border-[#2b3137] rounded-xl">
           <table class="w-full text-left text-xs font-mono">
-            <thead class="bg-[#181b1e] text-[#9fa6ad] uppercase">
+            <thead class="bg-[#16181a] text-[#9aa1a9] uppercase">
               <tr>
                 <th class="p-3">NCES ID</th>
                 <th class="p-3">District Name</th>
@@ -225,38 +226,38 @@
                 <th class="p-3">Status</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-[#2e353c] bg-[#1d2125] text-[#d8d5cd]">
+            <tbody class="divide-y divide-[#2b3137] bg-[#1a1d20] text-[#d5d2ca]">
               <tr>
-                <td class="p-3 text-[#9fa6ad]">1300120</td>
-                <td class="p-3 font-semibold text-[#eceae4]">Atlanta Public Schools</td>
+                <td class="p-3 text-[#9aa1a9]">1300120</td>
+                <td class="p-3 font-semibold text-[#f0eee9]">Atlanta Public Schools</td>
                 <td class="p-3">GA</td>
-                <td class="p-3 text-[#c7b299]">14,280</td>
-                <td class="p-3 text-[#7c8f9e]">https://www.atlantapublicschools.us</td>
-                <td class="p-3 text-[#8da399]">200 OK (Verified)</td>
+                <td class="p-3 text-[#c9b49c]">14,280</td>
+                <td class="p-3 text-[#738896]">https://www.atlantapublicschools.us</td>
+                <td class="p-3 text-[#9ab4a5]">200 OK (Verified)</td>
               </tr>
               <tr>
-                <td class="p-3 text-[#9fa6ad]">2601103</td>
-                <td class="p-3 font-semibold text-[#eceae4]">Detroit Public Schools Community District</td>
+                <td class="p-3 text-[#9aa1a9]">2601103</td>
+                <td class="p-3 font-semibold text-[#f0eee9]">Detroit Public Schools Community District</td>
                 <td class="p-3">MI</td>
-                <td class="p-3 text-[#c7b299]">13,450</td>
-                <td class="p-3 text-[#7c8f9e]">https://www.detroitk12.org</td>
-                <td class="p-3 text-[#8da399]">200 OK (Verified)</td>
+                <td class="p-3 text-[#c9b49c]">13,450</td>
+                <td class="p-3 text-[#738896]">https://www.detroitk12.org</td>
+                <td class="p-3 text-[#9ab4a5]">200 OK (Verified)</td>
               </tr>
               <tr>
-                <td class="p-3 text-[#9fa6ad]">4700148</td>
-                <td class="p-3 font-semibold text-[#eceae4]">Memphis-Shelby County Schools</td>
+                <td class="p-3 text-[#9aa1a9]">4700148</td>
+                <td class="p-3 font-semibold text-[#f0eee9]">Memphis-Shelby County Schools</td>
                 <td class="p-3">TN</td>
-                <td class="p-3 text-[#c7b299]">28,920</td>
-                <td class="p-3 text-[#7c8f9e]">https://www.scsk12.org</td>
-                <td class="p-3 text-[#8da399]">200 OK (Verified)</td>
+                <td class="p-3 text-[#c9b49c]">28,920</td>
+                <td class="p-3 text-[#738896]">https://www.scsk12.org</td>
+                <td class="p-3 text-[#9ab4a5]">200 OK (Verified)</td>
               </tr>
               <tr>
-                <td class="p-3 text-[#9fa6ad]">2400090</td>
-                <td class="p-3 font-semibold text-[#eceae4]">Baltimore City Public Schools</td>
+                <td class="p-3 text-[#9aa1a9]">2400090</td>
+                <td class="p-3 font-semibold text-[#f0eee9]">Baltimore City Public Schools</td>
                 <td class="p-3">MD</td>
-                <td class="p-3 text-[#c7b299]">19,810</td>
-                <td class="p-3 text-[#7c8f9e]">https://www.baltimorecityschools.org</td>
-                <td class="p-3 text-[#8da399]">200 OK (Verified)</td>
+                <td class="p-3 text-[#c9b49c]">19,810</td>
+                <td class="p-3 text-[#738896]">https://www.baltimorecityschools.org</td>
+                <td class="p-3 text-[#9ab4a5]">200 OK (Verified)</td>
               </tr>
             </tbody>
           </table>
@@ -265,24 +266,24 @@
 
       <!-- Tab 3: Playwright Logs -->
       <div id="tab-playwright" class="k12-tab hidden space-y-4">
-        <div class="bg-[#181b1e] p-4 rounded-xl border border-[#2e353c] text-xs font-mono space-y-1.5 text-[#d8d5cd]">
-          <div class="text-[#727a82]">// Execution logs demonstrating robots.txt compliance & Playwright fallback</div>
-          <div><span class="text-[#7c8f9e]">[INFO]</span> Initializing fetcher.py with per-domain rate limit: 1.0s delay</div>
-          <div><span class="text-[#7c8f9e]">[INFO]</span> Checking robots.txt for https://www.detroitk12.org/staff ... <span class="text-[#8da399]">ALLOWED</span></div>
-          <div><span class="text-[#c7b299]">[WARN]</span> Raw HTML extractor returned 0 contacts on /staff-directory (SPA / Client-side Hydration Detected)</div>
-          <div><span class="text-[#9e8e9f]">[FALLBACK]</span> Triggering Playwright headless session (Chromium)</div>
-          <div><span class="text-[#9e8e9f]">[PLAYWRIGHT]</span> Page loaded. Waiting for network idle... <span class="text-[#8da399]">DOM ready</span></div>
-          <div><span class="text-[#7c8f9e]">[EXTRACTOR]</span> Successfully parsed 14 staff records matching counselor title patterns</div>
-          <div><span class="text-[#8da399]">[SUCCESS]</span> Cached rendered HTML to disk cache /cache/2601103_staff.html</div>
+        <div class="bg-[#16181a] p-4 rounded-xl border border-[#2b3137] text-xs font-mono space-y-1.5 text-[#d5d2ca]">
+          <div class="text-[#687077]">// Execution logs demonstrating robots.txt compliance & Playwright fallback</div>
+          <div><span class="text-[#738896]">[INFO]</span> Initializing fetcher.py with per-domain rate limit: 1.0s delay</div>
+          <div><span class="text-[#738896]">[INFO]</span> Checking robots.txt for https://www.detroitk12.org/staff ... <span class="text-[#9ab4a5]">ALLOWED</span></div>
+          <div><span class="text-[#c9b49c]">[WARN]</span> Raw HTML extractor returned 0 contacts on /staff-directory (SPA / Client-side Hydration Detected)</div>
+          <div><span class="text-[#b88d84]">[FALLBACK]</span> Triggering Playwright headless session (Chromium)</div>
+          <div><span class="text-[#b88d84]">[PLAYWRIGHT]</span> Page loaded. Waiting for network idle... <span class="text-[#9ab4a5]">DOM ready</span></div>
+          <div><span class="text-[#738896]">[EXTRACTOR]</span> Successfully parsed 14 staff records matching counselor title patterns</div>
+          <div><span class="text-[#9ab4a5]">[SUCCESS]</span> Cached rendered HTML to disk cache /cache/2601103_staff.html</div>
         </div>
       </div>
 
       <!-- Tab 4: 1-Page Rerun Documentation -->
       <div id="tab-docs" class="k12-tab hidden space-y-4">
-        <div class="bg-[#181b1e] p-5 rounded-xl border border-[#2e353c] text-xs space-y-3">
-          <h4 class="font-bold text-[#eceae4] text-sm">Handoff & Rerun Architecture Specification</h4>
-          <p class="text-[#d8d5cd]"><strong>Requirements:</strong> Python 3.8+, Playwright (optional headless fallback). Preserves standard library architecture for fetcher.py.</p>
-          <div class="bg-[#212529] p-3 rounded border border-[#2e353c] font-mono text-[11px] text-[#7c8f9e]">
+        <div class="bg-[#16181a] p-5 rounded-xl border border-[#2b3137] text-xs space-y-3">
+          <h4 class="font-bold text-[#f0eee9] text-sm">Handoff & Rerun Architecture Specification</h4>
+          <p class="text-[#d5d2ca]"><strong>Requirements:</strong> Python 3.8+, Playwright (optional headless fallback). Preserves standard library architecture for fetcher.py.</p>
+          <div class="bg-[#1e2226] p-3 rounded border border-[#2b3137] font-mono text-[11px] text-[#738896]">
             # Step 1: Run district URL verification and ranking<br>
             python run_scrape.py --mode districts --rank-by black_enrollment_9_12 --limit 500<br><br>
             # Step 2: Extract staff directories with Playwright fallback<br>
@@ -290,7 +291,7 @@
             # Step 3: Verify email formatting and deduplicate<br>
             python verify_emails.py --input raw_contacts.csv --output contacts_verified.csv
           </div>
-          <p class="text-[#9fa6ad]">All scripts preserve robots.txt checking, respectful request throttling, and resumable disk caching as specified in the original README.</p>
+          <p class="text-[#9aa1a9]">All scripts preserve robots.txt checking, respectful request throttling, and resumable disk caching as specified in the original README.</p>
         </div>
       </div>
 
@@ -300,7 +301,7 @@
   <script>
     function runK12Pipeline() {
       const btn = document.getElementById('run-btn');
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Running Extraction Pipeline...';
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-[#9ab4a5]"></i> Running Extraction Pipeline...';
 
       const nodes = ['node-1', 'node-2', 'node-3', 'node-4'];
       nodes.forEach(n => document.getElementById(n).classList.remove('node-active'));
@@ -315,9 +316,9 @@
         } else {
           clearInterval(interval);
           nodes.forEach(n => document.getElementById(n).classList.remove('node-active'));
-          btn.innerHTML = '<i class="fa-solid fa-check text-[#8da399]"></i> Pilot Finished (50/50 Verified)';
+          btn.innerHTML = '<i class="fa-solid fa-check text-[#9ab4a5]"></i> Pilot Finished (50/50 Verified)';
           setTimeout(() => {
-            btn.innerHTML = '<i class="fa-solid fa-play text-xs"></i> Run Data Extraction Pilot';
+            btn.innerHTML = '<i class="fa-solid fa-play text-xs text-[#9ab4a5]"></i> Run Data Extraction Pilot';
           }, 2500);
         }
       }, 350);
@@ -331,9 +332,9 @@
       tabs.forEach(t => {
         const btn = document.getElementById('btn-' + t);
         if (t === tabId) {
-          btn.className = "px-3.5 py-1.5 rounded-lg bg-[#404e5a] text-[#eceae4] font-medium flex items-center gap-2 text-xs border border-[#526372]";
+          btn.className = "px-3.5 py-1.5 rounded-lg bg-[#3b4742] text-[#f0eee9] font-medium flex items-center gap-2 text-xs border border-[#52635c]";
         } else {
-          btn.className = "px-3.5 py-1.5 rounded-lg bg-[#181b1e] text-[#9fa6ad] hover:text-[#eceae4] font-medium flex items-center gap-2 text-xs border border-[#2b3136]";
+          btn.className = "px-3.5 py-1.5 rounded-lg bg-[#16181a] text-[#9aa1a9] hover:text-[#f0eee9] font-medium flex items-center gap-2 text-xs border border-[#262c32]";
         }
       });
     }
