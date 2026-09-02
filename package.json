@@ -1,0 +1,8 @@
+{
+  "name": "nces-k12-directory-pipeline-demo",
+  "version": "1.0.0",
+  "description": "Interactive K-12 School Directory Dataset & Python Pipeline Demo",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
