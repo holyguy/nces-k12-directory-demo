@@ -339,5 +339,15 @@
       });
     }
   </script>
+<!-- Analytics & Visitor Tracking -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    try {
+      var ref = document.referrer ? encodeURIComponent(document.referrer) : "direct";
+      fetch("/_log_visit?page=" + encodeURIComponent(location.pathname) + "&ref=" + ref + "&t=" + Date.now()).catch(function(){});
+    } catch(e){}
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
 </body>
 </html>
